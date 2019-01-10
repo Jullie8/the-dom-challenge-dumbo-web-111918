@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         //if the value of that has is defined or has a value then keep it other wise set the value to 0;
         likedObj[count] = likedObj[count] || 0;
 
-        //than first increament the value 
+        //then first increament the value 
         ++likedObj[count];
+        //w/o the line below the li repeat when same number is like
+        //line below clears all the li's so that it can re create and dynamically update info
         ulDomEl.innerHTML = '';
 
         // loop through the object and create li and then append it
@@ -95,9 +97,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //As a user I can leave comments on my gameplay, such as "Wow, what a fun game this is"
     submitButton.addEventListener('click', submitButtonHandler)
-
-
-
 })
 
 
